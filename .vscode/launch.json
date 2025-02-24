@@ -1,0 +1,48 @@
+{
+    //"args": ["--data_dir","C:\\Users\\15419\\Desktop\\Github repo\\train-llm-from-scratch\\Datasets\\Gutenberg\\Gutenberg_data\\txt",
+    //"--output_dir","C:\\Users\\15419\\Desktop\\Github repo\\train-llm-from-scratch\\Datasets\\Gutenberg\\data_dir",
+    //"--max_size_mb","500"]
+    //"args": ["--data_dir","C:\\Users\\15419\\Desktop\\Github repo\\train-llm-from-scratch\\Datasets\\Gutenberg\\Gutenberg_data_small\\txt",
+    //"--output_dir","C:\\Users\\15419\\Desktop\\Github repo\\train-llm-from-scratch\\Datasets\\Gutenberg\\data_dir_small",
+    //"--max_size_mb","2"]
+    //"args": ["--data_dir","/home/ec2-user/train-llm-from-scratch/Datasets/Gutenberg/Gutenberg_data/txt",
+    //"--output_dir","/home/ec2-user/train-llm-from-scratch/Datasets/Gutenberg/data_dir_small",
+    //"--max_size_mb","2"]
+    // "args": ["--data_dir","/home/ec2-user/train-llm-from-scratch/Datasets/Alpaca/data",
+    // "--load_weights","--finetune","--dataset","alpaca",
+    // "--run_type","multi_gpu","--use_actv_ckpt",
+    // "--eval_freq","100",
+    // "--print_sample_iter","100","--save_ckpt_freq","100","--lr","1e-5",
+    // "--num_params","124M"]
+    // "args": ["--data_dir","/home/ec2-user/train-llm-from-scratch/Datasets/Alpaca/data",
+    // "--debug","--use_lora","--model","llama3_2","--finetune","--dataset","alpaca",
+    // "--run_type","multi_gpu","--use_actv_ckpt",
+    // "--eval_freq","10","--print_sample_iter","10","--save_ckpt_freq","10",
+    // "--lr","1e-5","--num_params","1B"]
+    // "args": ["--data_dir","C:\\Users\\15419\\Desktop\\Github repo\\train-llm-from-scratch\\Datasets\\Alpaca\\data",
+    // "--load_weights","--use_lora",
+    // "--model","llama3_2","--data_type","bf16",
+    // "--finetune","--dataset","alpaca",
+    // "--run_type","single_gpu","--use_actv_ckpt",
+    // "--eval_freq","10","--print_sample_iter","10","--save_ckpt_freq","10",
+    // "--lr","1e-5","--num_params","1B"]
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "subProcess": true,
+            "justMyCode": false, 
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"  // Use GPU 0,1 only
+            },
+            "args": ["--data_dir","/home/ec2-user/train-llm-from-scratch/Datasets/Alpaca/data",
+            "--load_weights","--use_actv_ckpt","--dataset", "alpaca","--finetune","--use_lora"]
+
+        }
+    ]
+}
